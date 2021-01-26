@@ -68,6 +68,11 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 //                print(self.stateNames.count)
 //                print(self.cases)
 //                print(self.deaths)
+                
+                //send all this info to FavVC
+                FavoriteStateViewController.stateNames.append(stateName)
+                FavoriteStateViewController.todayCases.append(caseNum)
+                FavoriteStateViewController.todayDeaths.append(deathNum)
             }
         }
         
@@ -85,7 +90,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StateCell") as! StateCell
         
-        print(stateNames)
+//        print(stateNames)
         if (stateNames.count == 0 || todayCases.count == 0 || todayDeaths.count == 0){
             self.viewDidLoad()
             return cell

@@ -104,6 +104,30 @@ class StateDetailViewController: UIViewController {
         }
 
     }
+    
+    @IBAction func favoriteButton(_ sender: Any) {
+//        let screen = FavoriteStateViewController()
+        //sending info for one state
+        
+//        FavoriteStateViewController.stateNames.append(self.stateName)
+//        FavoriteStateViewController.todayCases.append(self.todayCases[self.index + 55] - self.todayCases[self.index])
+//        FavoriteStateViewController.todayDeaths.append(self.todayDeaths[self.index + 55] - self.todayDeaths[self.index])
+//        FavoriteStateViewController.allTimeCases.append(self.todayCases[self.index + 55])
+//        FavoriteStateViewController.allTimeDeaths.append(self.todayDeaths[self.index + 55])
+
+        
+        //send indexes of fav states
+        //mainVC will provide the arrays to calculate everything when mainVC is loaded
+        FavoriteStateViewController.index.append(self.index)
+        
+        
+        print("Appending")
+        
+        //need this to reload the data in FavoriteStatesViewController
+        let notificationNme = NSNotification.Name("NotificationIdf")
+        NotificationCenter.default.post(name: notificationNme, object: nil)
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
