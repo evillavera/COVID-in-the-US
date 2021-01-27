@@ -30,7 +30,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         //let state = "new jersey"
         let state = "new%20york"
         let days = "2"
-        print("hello")
+//        print("hello")
         
         let session = URLSession.shared
         

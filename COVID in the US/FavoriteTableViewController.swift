@@ -21,9 +21,9 @@ class FavoriteTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print(FavoriteStateViewController.stateNames)
-        print(FavoriteStateViewController.todayCases)
-        print(FavoriteStateViewController.todayDeaths)
+//        print(FavoriteStateViewController.stateNames)
+//        print(FavoriteStateViewController.todayCases)
+//        print(FavoriteStateViewController.todayDeaths)
         
         let notificationNme = NSNotification.Name("NotificationIdf")
         NotificationCenter.default.addObserver(self, selector: #selector(FavoriteTableViewController.reloadTableview), name: notificationNme, object: nil)

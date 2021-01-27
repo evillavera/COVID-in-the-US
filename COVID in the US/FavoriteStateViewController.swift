@@ -18,7 +18,7 @@ class FavoriteStateViewController: UIViewController,UITableViewDelegate, UITable
 
     @IBOutlet weak var statesTableView: UITableView!
     @objc func reloadTableview() {
-        print("Reloading data")
+//        print("Reloading data")
         self.statesTableView.reloadData()
 //        self.viewDidLoad()
     }
@@ -32,7 +32,7 @@ class FavoriteStateViewController: UIViewController,UITableViewDelegate, UITable
 //        print(FavoriteStateViewController.stateNames)
 //        print(FavoriteStateViewController.todayCases)
 //        print(FavoriteStateViewController.todayDeaths)
-        print(FavoriteStateViewController.index)
+//        print(FavoriteStateViewController.index)
         // Do any additional setup after loading the view.
         
         let notificationNme = NSNotification.Name("NotificationIdf")
@@ -49,7 +49,7 @@ class FavoriteStateViewController: UIViewController,UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FavStateCell") as! StateCell
-        print("Inside cell making process")
+//        print("Inside cell making process")
 //        print(stateNames)
         if (FavoriteStateViewController.stateNames.count == 0 || FavoriteStateViewController.todayCases.count == 0 || FavoriteStateViewController.todayDeaths.count == 0){
             print(FavoriteStateViewController.stateNames.count)

@@ -5,9 +5,31 @@
 //  Created by Erik Villavera on 1/25/21.
 //
 
+//add animations and sound 
+
 import UIKit
+import AVFoundation
 
 class StateDetailViewController: UIViewController {
+    
+    var audioPlayer: AVAudioPlayer?
+    
+    func playSound(){
+        guard let url = Bundle.main.url(forResource: "Blop", withExtension: "mp3") else {return}
+        
+        do{
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            audioPlayer = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+            
+            guard let audioPlayer = audioPlayer else {return}
+            
+            audioPlayer.play()
+        }catch let error {
+            print(error.localizedDescription)
+        }
+    }
     
     var index = 0;
     var stateNames: [String] = []
@@ -18,6 +40,7 @@ class StateDetailViewController: UIViewController {
     var inputCases: [Int] = []
     var inputDeaths: [Int] = []
     
+    @IBOutlet weak var heart: UIImageView!
     @IBOutlet weak var stateNameLabel: UILabel!
     @IBOutlet weak var allTimeCasesLabel: UILabel!
     @IBOutlet weak var allTimeDeathsLabel: UILabel!
@@ -42,6 +65,17 @@ class StateDetailViewController: UIViewController {
 //        }
         
 //        let days = dayInput.text
+        
+//        let sound = Bundle.main.path(forResource: "Blop", ofType: "mp3")
+//
+//        do{
+//            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+//            print("able to play sound")
+//        }catch{
+//            print("Unable to play sound")
+//        }
+//
+//        audioPlayer.play()
         
         guard let days = Int(dayInput.text!) else{
             print("Input A number")
@@ -121,7 +155,30 @@ class StateDetailViewController: UIViewController {
         FavoriteStateViewController.index.append(self.index)
         
         
-        print("Appending")
+        //UIView Animation
+//        let newButtonWidth: CGFloat = 60
+//        audioPlayer.play()
+        
+        self.playSound()
+        
+        let onScreenDestX: CGFloat = UIScreen.main.bounds.width - 40
+        let onScreenDestY: CGFloat = UIScreen.main.bounds.height - 125
+        let offScreenDestX: CGFloat = UIScreen.main.bounds.width
+        let offScreenDestY: CGFloat = UIScreen.main.bounds.height
+        print("animating")
+//        audioPlayer.play()
+        
+        UIView.animate(withDuration: 1.0) {
+            self.heart.center = CGPoint(x: onScreenDestX, y: onScreenDestY)
+        }
+        
+        UIView.animate(withDuration: 6.0) {
+            self.heart.center = CGPoint(x: offScreenDestX, y: offScreenDestY)
+        }
+        
+        
+        
+//        print("Appending")
         
         //need this to reload the data in FavoriteStatesViewController
         let notificationNme = NSNotification.Name("NotificationIdf")
@@ -132,9 +189,9 @@ class StateDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(self.stateName)
-        print(index)
-        print(todayCases)
+//        print(self.stateName)
+//        print(index)
+//        print(todayCases)
         // Do any additional setup after loading the view.
         
         stateNameLabel.text = stateName
