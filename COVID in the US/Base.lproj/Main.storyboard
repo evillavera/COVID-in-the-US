@@ -128,7 +128,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All time totals:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7U-3p-zY6">
                                 <rect key="frame" x="20" y="204" width="374" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -166,8 +166,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9N9-3c-2N5">
-                                <rect key="frame" x="184" y="581" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="175" y="581" width="64" height="30"/>
+                                <state key="normal" title="Calculate"/>
                                 <connections>
                                     <action selector="calculateData:" destination="UlA-ps-4cx" eventType="touchUpInside" id="Rlx-Uu-6BZ"/>
                                 </connections>
@@ -180,12 +180,13 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's Numbers:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7p-Pa-fVg">
                                 <rect key="frame" x="20" y="298.5" width="374" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3kf-La-iD2">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input Days Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3kf-La-iD2">
                                 <rect key="frame" x="111" y="515" width="192" height="34"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="cc-number"/>
                             </textField>
@@ -215,7 +216,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpm-u0-MWn">
                                 <rect key="frame" x="20" y="615" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -228,7 +229,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FaO-od-vbc">
                                 <rect key="frame" x="0.0" y="88" width="414" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="3md-M1-LCr">
+                                    <navigationItem title="State Details" id="3md-M1-LCr">
                                         <barButtonItem key="rightBarButtonItem" title="Favorite" id="Wju-2H-3wd">
                                             <connections>
                                                 <action selector="favoriteButton:" destination="UlA-ps-4cx" id="ZsC-PV-5hM"/>
@@ -250,7 +251,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8md-vg-X1M"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.61678072630000003" green="0.86281461969999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="cpm-u0-MWn" firstAttribute="top" secondItem="csH-hX-8x2" secondAttribute="bottom" constant="122.5" id="11B-Po-Wok"/>
                             <constraint firstItem="8md-vg-X1M" firstAttribute="trailing" secondItem="VxY-3Z-FPh" secondAttribute="trailing" constant="20" id="2hy-zS-dfh"/>
@@ -498,11 +499,11 @@
             </objects>
             <point key="canvasLocation" x="1532" y="737"/>
         </scene>
-        <!--Item-->
+        <!--States-->
         <scene sceneID="mZe-Ra-4NU">
             <objects>
                 <navigationController id="bb8-Lh-Jfc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="BUQ-J9-eeJ"/>
+                    <tabBarItem key="tabBarItem" title="States" image="info.circle" catalog="system" id="BUQ-J9-eeJ"/>
                     <navigationItem key="navigationItem" id="jzu-l4-Ur1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nWa-bt-jBM">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -516,11 +517,11 @@
             </objects>
             <point key="canvasLocation" x="384" y="-11"/>
         </scene>
-        <!--Item-->
+        <!--Favorite-->
         <scene sceneID="dK6-LJ-chf">
             <objects>
                 <navigationController id="O4s-eg-vcb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Mnx-q9-vzd"/>
+                    <tabBarItem key="tabBarItem" title="Favorite" image="suit.heart.fill" catalog="system" id="Mnx-q9-vzd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4mo-wt-mLb">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -539,6 +540,8 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.up.heart.fill" catalog="system" width="128" height="109"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="suit.heart.fill" catalog="system" width="128" height="109"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

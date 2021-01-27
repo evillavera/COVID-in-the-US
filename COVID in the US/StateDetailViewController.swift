@@ -165,7 +165,7 @@ class StateDetailViewController: UIViewController {
         let onScreenDestY: CGFloat = UIScreen.main.bounds.height - 125
         let offScreenDestX: CGFloat = UIScreen.main.bounds.width
         let offScreenDestY: CGFloat = UIScreen.main.bounds.height
-        print("animating")
+//        print("animating")
 //        audioPlayer.play()
         
         UIView.animate(withDuration: 1.0) {
